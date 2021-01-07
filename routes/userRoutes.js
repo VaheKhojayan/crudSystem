@@ -7,8 +7,8 @@ routes.route('/logout')
 .get(usersFunctions.getLandingPage);
 
 routes.route('/home')
-//.get([usersFunctions.verifyToken],usersFunctions.getHomePage);
-.get(usersFunctions.getHomePage);
+get([usersFunctions.verifyToken],usersFunctions.getHomePage);
+
 
 
 module.exports = routes;
