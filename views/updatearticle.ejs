@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+
+
+    <form action="/user/updatearticle" id="newArticleForm" enctype="multipart/form-data" method='post'>
+        <input type="text" name="title"  placeholder="Title" required value='<%=result.title%>'>
+        <p></p> 
+        <textarea name="description" placeholder="Description" cols="20" rows="5" required >
+        <%=result.description%> </textarea>
+        <p></p>
+        <textarea name="content" placeholder="Content" cols="40" rows="10" required >
+        <%=result.content%> </textarea>
+        <p></p>
+        <img src = '/uploads/<%= result.imgname %>' >
+        <p></p>
+
+        <input type="hidden" name="imgname" value="<%= result.imgname %>" >
+       <input type="hidden" name="id" value="<%= result.id %>">
+           <p></p>
+
+        <input type="file" name="myFile" >
+        <p></p>
+        <input type="submit"  value='Update'>    
+    </form>
+
+    <button ><a  href='/user/home'> Back </a></button>
+ 	
+ 	
+</body>
+<script type="text/javascript" src=""></script>
+
+</html>

@@ -5,6 +5,8 @@
 	
 </head>
 <body>
+
+  <button ><a  href='/user/addnewarticle'> Add article </a></button>
  <table>
  	<tr>
  		<th>Id</th>
@@ -12,6 +14,7 @@
  		<th>Description</th>
  		<th>Content</th>
  		<th>ImageName</th>
+    <th>Action</th>
  	</tr>
   <% for(let page of result){ %>
       <tr>
@@ -20,14 +23,19 @@
         <td><%= page['description'] %> </td>
         <td><%= page['content'] %> </td>
         <td><%= page['imgname'] %> </td>
+        <td>
+            <button ><a  href='/user/readarticle?id=<%=page['id'] %>' >Read</a></button>
+            <button ><a  href='/user/updatearticle?id=<%=page['id'] %>'>Update</a></button>
+            <button class="delete" id='<%= page['id'] %>'> Delete</button>
+        </td>
       </tr>
                 <% } %>
-                                     
+                            
 
  </table>
 
  	
 </body>
-<script type="text/javascript" src=""></script>
+<script type="text/javascript" src="/javascripts/deletearticle.js"></script>
 
 </html>
