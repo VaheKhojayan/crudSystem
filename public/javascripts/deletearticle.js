@@ -18,7 +18,7 @@ for (delbtn of articleDeletes){
 	  .then(result => {
 	  	 if(result.del==1){
 	  	 	
-	  	//delbtn.parentNode.parentNode.remove()
+	  	delbtn.parentNode.parentNode.remove()
 	  	
 	  }
 
