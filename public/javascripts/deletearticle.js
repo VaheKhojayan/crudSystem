@@ -1,10 +1,10 @@
 let articleDeletes=document.querySelectorAll('.delete');
 
-for (delbtn of articleDeletes){
+for (let delbtn of articleDeletes){
 	delbtn.addEventListener('click', (e) => {
 		e.preventDefault();
         
-		let objItem={_id:this.id};
+		let objItem={_id:delbtn.id};
 
 
 		fetch('/user/deletearticle',{

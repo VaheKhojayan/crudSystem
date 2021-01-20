@@ -10,6 +10,7 @@ const path = require('path') ;
 const salt = 10;
 
 var getLandingPage = (req,res) => {
+  res.cookie('token','deleted',{ httpOnly: true })
    res.render('landing')
 }
 
